@@ -3,49 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced Video Stream</title>
+    <title>Responsive Video Stream</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            color: #fff;
-        }
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* Dark background for better contrast */
+}
 
-        .video-container {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            max-width: 80%;
-            width: 800px;
-        }
+.video-container {
+    width: 80%;
+    max-width: 800px;
+}
 
-        video {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            outline: none;
-        }
+video {
+    width: 100%;
+    height: auto;
+    border: 5px solid #ffffff; /* White border for better visibility */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
 
-        video::-webkit-media-controls {
-            color: #333;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 5px;
-        }
+@media (max-width: 600px) {
+    .video-container {
+        width: 100%;
+    }
+}
 
-        video::-webkit-media-controls-play-button,
-        video::-webkit-media-controls-fullscreen-button {
-            filter: invert(1);
-        }
-
-        video:hover {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
     </style>
 </head>
 <body>
